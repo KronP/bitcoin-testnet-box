@@ -44,4 +44,13 @@ WORKDIR /home/tester/bitcoin-testnet-box
 
 # expose two rpc ports for the nodes to allow outside container access
 EXPOSE 19001 19011
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
+
+#CMD ["make start",
+#  "bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 createwallet testwallet", "/bin/bash"]
+#RUN make generate BLOCKS=140
+RUN chmod +x /home/tester/bitcoin-testnet-box/entrypoint.sh
+
+ENTRYPOINT ["sh", "-c", "/home/tester/bitcoin-testnet-box/entrypoint.sh", "&&", "/bin/bash"]
+
+#CMD ["/bin/bash"]
