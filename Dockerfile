@@ -51,6 +51,6 @@ EXPOSE 19001 19011
 #RUN make generate BLOCKS=140
 RUN chmod +x /home/tester/bitcoin-testnet-box/entrypoint.sh
 
-ENTRYPOINT ["sh", "-c", "/home/tester/bitcoin-testnet-box/entrypoint.sh", "&&", "/bin/bash"]
+ENTRYPOINT ["sh", "-c", "/home/tester/bitcoin-testnet-box/entrypoint.sh"]
 
 #CMD ["/bin/bash"]
