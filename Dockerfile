@@ -1,7 +1,7 @@
 # bitcoin-testnet-box docker image
 
 FROM ubuntu
-LABEL maintainer="Sean Lavine <lavis88@gmail.com>"
+# Slight modification of orignal code. So new auther. Only inteded for testing use of my own projects. But of course free to use according to original license.
 
 # install make
 RUN apt-get update && \
