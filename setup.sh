@@ -11,10 +11,11 @@ install --mode 755 --target-directory /usr/local/bin *
 cd /workspace/bitcoin-testnet-box/
 rm -r tmp
 make start
+sleep 5
 
 bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 createwallet testwallet
 
-make generate BLOCKS=250
+make generate BLOCKS=200
 
 # Add money to users
 bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 -named sendtoaddress address=mqRxU5gTKqzbaJvkuij3DPASxjxna1oVWR amount=50 fee_rate=25
