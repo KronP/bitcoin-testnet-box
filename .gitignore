@@ -4,3 +4,4 @@
 ?/regtest/*
 !?/regtest/server.pem
 !?/regtest/server.cert
+2/testnet3/*
