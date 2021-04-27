@@ -15,7 +15,8 @@ sleep 5
 
 bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 createwallet testwallet
 
-make generate BLOCKS=200
+make generate BLOCKS=2000
 
 # Add money to users
 bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 -named sendtoaddress address=mqRxU5gTKqzbaJvkuij3DPASxjxna1oVWR amount=50 fee_rate=25
+bitcoin-cli -rpcport=19001 -rpcpassword=123 -rpcuser=admin1 -named sendtoaddress address=mzzNHrRXQ6Ru7dWseRqBssXyKvCqbaLeW9 amount=5000 fee_rate=25
