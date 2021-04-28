@@ -11,8 +11,8 @@ AMOUNT=
 ACCOUNT=
 
 start:
-	$(BITCOIND) $(B1) -daemon
-	$(BITCOIND) $(B2) -daemon
+	$(BITCOIND) $(B1) -daemon -regtest
+	$(BITCOIND) $(B2) -daemon -regtest
 
 start-gui:
 	$(BITCOINGUI) $(B1) &
